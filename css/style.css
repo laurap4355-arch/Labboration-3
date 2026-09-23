@@ -381,3 +381,15 @@ h3 {
   outline: 3px solid #f5860e; /* Fokusram */
   outline-offset: 3px; /* Avstånd till fokusram */
 }
+
+/* Lite större mobilskärmar */
+@media (min-width: 380px) {
+  .site-footer {
+    grid-template-columns: 1fr 1fr; /* Två kolumner */
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1; /* Brand använder båda kolumnerna */
+  }
+}
+
