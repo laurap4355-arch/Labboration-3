@@ -1,0 +1,383 @@
+/*  mobile-first */
+
+*,
+*::before {
+  box-sizing: border-box; /* Padding och border räknas in i bredden */
+}
+
+body {
+  margin: 0; /* Tar bort webbläsarens standardmarginal */
+  color: #48645a; /* Grundfärg för vanlig text */
+  background-color: #f5efe3; /* Sidans bakgrundsfärg */
+  font-family: "Montserrat", sans-serif; /* Typsnitt för vanlig text */
+  line-height: 1.5; /* Avstånd mellan textrader */
+}
+
+img {
+  display: block; /* Tar bort extra mellanrum under bilder */
+  max-width: 100%; /* Bilden blir aldrig bredare än sin behållare */
+}
+
+h1,
+h2,
+h3 {
+  color: #1f3932; /* Rubrikernas färg */
+  font-family: "Lora", serif; /* Rubrikernas typsnitt */
+  line-height: 1.2; /* Radavstånd för rubriker */
+}
+
+
+/* Header – mobil */
+
+.site-header { 
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Innehållet placeras under varandra */
+}
+
+.brand {
+  display: flex; /* Logotyp och namn placeras bredvid varandra */
+  align-items: center; /* Centrerar innehållet lodrätt */
+  gap: 16px; /* Mellanrum mellan logotyp och namn */
+  padding: 16px; /* Luft runt logotypen och namnet */
+}
+
+.logo {
+  display: block; /* Gör länken till ett blockelement */
+  line-height: 0; /* Tar bort extra utrymme runt bilden */
+  text-decoration: none; /* Tar bort understrykning */
+}
+
+.logo img {
+  width: 70px; /* Logotypens bredd */
+  height: auto; /* Behåller bildens proportioner */
+}
+
+.site-name {
+  color: #1f3932; /* Webbplatsnamnets färg */
+  font-family: "Lora", serif; /* Webbplatsnamnets typsnitt */
+  font-size: 1.15rem; /* Webbplatsnamnets textstorlek */
+  font-weight: 700; /* Fet text */
+  text-transform: uppercase; /* Visar stora bokstäver */
+}
+
+
+/* Navigation – mobil*/
+
+.navbar {
+  width: 100%; /* Navigationen använder hela bredden */
+}
+
+.navbar ul {
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Länkarna placeras under varandra */
+  margin: 0; /* Tar bort listans standardmarginal */
+  padding: 0; /* Tar bort listans standardpadding */
+  list-style: none; /* Tar bort listpunkterna */
+}
+
+.navbar li {
+  border-top: 1px solid rgba(31, 57, 50, 0.35); /* Linje över varje länk */
+}
+
+.navbar li:last-child {
+  border-bottom: 1px solid rgba(31, 57, 50, 0.35); /* Linje under sista länken */
+}
+
+.navbar a {
+  display: block; /* Gör hela området klickbart */
+  padding: 10px 16px; /* Luft inuti länken */
+  color: #48645a; /* Länkens färg */
+  font-size: 0.9rem; /* Länkens textstorlek */
+  text-align: center; /* Centrerar texten */
+  text-decoration: none; /* Tar bort understrykning */
+}
+
+.navbar a:hover {
+  color: #1f3932; /* Ändrar färgen vid hover */
+  text-decoration: underline; /* Understryker länken vid hover */
+}
+
+.navbar a:focus-visible {
+  color: #1f3932; /* Textfärg vid tangentbordsfokus */
+  outline: 3px solid #f5860e; /* Synlig fokusram */
+  outline-offset: -3px; /* Flyttar fokusramen innanför länken */
+}
+
+
+/*  Hero – mobil*/
+
+.hero {
+  width: 100%; /* Hero använder hela sidans bredd */
+}
+
+.hero > img {
+  width: 100%; /* Bilden fyller hero-sektionen */
+  aspect-ratio: 16 / 9; /* Bildens proportioner på mobil */
+  object-fit: cover; /* Bilden fyller ytan utan att förvrängas */
+}
+
+.hero-content {
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Rubrik, text och knapp placeras under varandra */
+  align-items: center; /* Centrerar innehållet vågrätt */
+  padding: 24px 16px; /* Luft runt innehållet */
+  text-align: center; /* Centrerar texten */
+}
+
+.hero-content h1 {
+  margin: 0 0 12px; /* Mellanrum under rubriken */
+  max-width: 22ch; /* Begränsar rubrikens radlängd */
+  font-size: 1.5rem; /* Rubrikstorlek */
+}
+
+.hero-content p {
+  margin: 0 0 20px; /* Mellanrum under texten */
+  max-width: 38ch; /* Begränsar textens radlängd */
+  font-size: 0.9rem; /* Textstorlek */
+}
+
+
+/* Knappar */
+
+.button,
+.button2 {
+  display: inline-flex; /* Gör länken till en flexibel knapp */
+  min-height: 44px; /* Minsta tillgängliga klickhöjd */
+  padding: 11px 20px; /* Luft inuti knappen */
+  align-items: center; /* Centrerar texten lodrätt */
+  justify-content: center; /* Centrerar texten vågrätt */
+
+  color: #1f3932; /* Knappens textfärg */
+  background-color: #f5860e; /* Knappens bakgrundsfärg */
+
+  font-family: "Lora", serif; /* Knappens typsnitt */
+  font-size: 1rem; /* Knappens textstorlek */
+  font-weight: 700; /* Fet text */
+  text-align: center; /* Centrerar texten */
+  text-decoration: none; /* Tar bort understrykning */
+
+  border-radius: 5px; /* Rundade hörn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Skugga */
+}
+
+.button:hover,
+.button2:hover {
+  background-color: #dc7200; /* Mörkare färg vid hover */
+}
+
+.button:focus-visible,
+.button2:focus-visible {
+  outline: 3px solid #1f3932; /* Fokusram för tangentbord */
+  outline-offset: 3px; /* Avstånd mellan knapp och fokusram */
+}
+
+.button:active,
+.button2:active {
+  box-shadow: none; /* Tar bort skuggan när knappen trycks */
+}
+
+
+/* Introduktion*/
+
+.introduktion {
+  padding: 40px 16px; /* Luft inuti introduktionssektionen */
+  border-bottom: 1px solid rgba(31, 57, 50, 0.3); /* Linje under sektionen */
+}
+
+.introduktion-content {
+  max-width: 650px; /* Begränsar innehållets bredd */
+  margin: 0 auto; /* Centrerar innehållet */
+  text-align: center; /* Centrerar texten */
+}
+
+.introduktion-content h2 {
+  margin: 0 0 16px; /* Mellanrum under rubriken */
+  font-size: 1.5rem; /* Rubrikstorlek */
+}
+
+.introduktion-content p {
+  margin: 0 auto 16px; /* Centrerar texten och skapar mellanrum */
+  max-width: 45ch; /* Begränsar radlängden */
+  font-size: 0.9rem; /* Textstorlek */
+  line-height: 1.5; /* Radavstånd */
+}
+
+.introduktion-content p:last-child {
+  margin-bottom: 0; /* Tar bort marginal under sista stycket */
+}
+
+
+/*  Aktiviteter */
+
+.aktiviteter {
+  padding: 40px 16px 48px; /* Topp, sidor och botten */
+  border-bottom: 1px solid rgba(31, 57, 50, 0.3); /* Linje under sektionen */
+}
+
+.aktiviteter > h2 {
+  margin: 0 0 32px; /* Mellanrum under rubriken */
+  font-size: 1.5rem; /* Rubrikstorlek */
+  text-align: center; /* Centrerar rubriken */
+}
+
+.grid-container {
+  display: grid; /* Aktiverar CSS Grid */
+  grid-template-columns: 1fr; /* Ett kort per rad på mobil */
+  gap: 32px; /* Mellanrum mellan korten */
+
+  max-width: 360px; /* Kortområdets största bredd */
+  margin: 0 auto; /* Centrerar kortområdet */
+}
+
+.card {
+  display: flex; /* Aktiverar Flexbox */
+  width: 100%; /* Kortet använder hela kolumnens bredd */
+  overflow: hidden; /* Döljer innehåll utanför de rundade hörnen */
+  flex-direction: column; /* Bild och text placeras under varandra */
+
+  background-color: #fffdf8; /* Kortets bakgrundsfärg */
+  border-radius: 6px; /* Rundade hörn */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25); /* Kortets skugga */
+}
+
+.card img {
+  width: 100%; /* Bilden använder hela kortets bredd */
+  aspect-ratio: 3 / 2; /* Alla bilder får samma proportioner */
+  object-fit: cover; /* Bilden fyller bildytan */
+}
+
+.card-content {
+  padding: 16px; /* Luft runt texten i kortet */
+}
+
+.card-content h3 {
+  margin: 0 0 8px; /* Mellanrum under rubriken */
+  font-size: 1.1rem; /* Rubrikstorlek */
+}
+
+.card-content p {
+  margin: 0; /* Tar bort standardmarginal */
+  font-size: 0.9rem; /* Textstorlek */
+  line-height: 1.5; /* Radavstånd */
+}
+
+
+/* Avslutande CTA  */
+
+.avsluta {
+  padding: 48px 16px; /* Luft inuti sektionen */
+}
+
+.avsluta-content {
+  display: grid; /* Aktiverar CSS Grid */
+  grid-template-columns: 1fr; /* En kolumn på mobil */
+  gap: 16px; /* Mellanrum mellan rubrik, text och knapp */
+
+  max-width: 600px; /* Begränsar innehållets bredd */
+  margin: 0 auto; /* Centrerar innehållet */
+  text-align: center; /* Centrerar texten */
+}
+
+.avsluta-content h2 {
+  margin: 0; /* Tar bort standardmarginal */
+  font-size: 1.5rem; /* Rubrikstorlek */
+}
+
+.avsluta-content p {
+  margin: 0; /* Tar bort standardmarginal */
+  font-size: 0.9rem; /* Textstorlek */
+  line-height: 1.5; /* Radavstånd */
+}
+
+.button2 {
+  justify-self: center; /* Centrerar knappen */
+  margin-top: 8px; /* Mellanrum ovanför knappen */
+}
+
+
+/*  Footer – mobil*/
+
+.site-footer {
+  display: grid; /* Aktiverar CSS Grid */
+  grid-template-columns: 1fr; /* En kolumn på liten mobil */
+  gap: 32px; /* Mellanrum mellan footerns delar */
+
+  padding: 48px 20px 32px; /* Topp, sidor och botten */
+  background-color: #d8d0c2; /* Footerns bakgrundsfärg */
+}
+
+.footer-brand {
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Logotyp och text placeras under varandra */
+  align-items: center; /* Centrerar innehållet */
+  gap: 12px; /* Mellanrum mellan logotyp och text */
+  text-align: center; /* Centrerar texten */
+}
+
+.footer-logo {
+  width: 70px; /* Logotypens bredd */
+  height: auto; /* Behåller proportionerna */
+}
+
+.footer-brand-text {
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Texterna placeras under varandra */
+  gap: 6px; /* Mellanrum mellan texterna */
+}
+
+.footer-name {
+  margin: 0; /* Tar bort standardmarginal */
+  color: #1f3932; /* Textfärg */
+  font-family: "Lora", serif; /* Typsnitt */
+  font-size: 1.1rem; /* Textstorlek */
+  font-weight: 700; /* Fet text */
+  text-transform: uppercase; /* Stora bokstäver */
+}
+
+.footer-brand-text p {
+  margin: 0; /* Tar bort standardmarginal */
+  font-size: 0.85rem; /* Textstorlek */
+}
+
+.contacts h2,
+.footer-links h2 {
+  margin: 0 0 12px; /* Mellanrum under rubrikerna */
+  color: #1f3932; /* Rubrikfärg */
+  font-family: "Lora", serif; /* Rubriktypsnitt */
+  font-size: 1rem; /* Rubrikstorlek */
+}
+
+.address {
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Kontaktlänkarna visas under varandra */
+  gap: 8px; /* Mellanrum mellan kontaktlänkar */
+  font-style: normal; /* Tar bort kursiv standardstil */
+}
+
+.address a,
+.footer-links a {
+  color: #48645a; /* Länkfärg */
+  font-size: 0.85rem; /* Länkarnas textstorlek */
+  overflow-wrap: anywhere; /* Tillåter långa länkar att radbrytas */
+}
+
+.footer-links ul {
+  display: flex; /* Aktiverar Flexbox */
+  flex-direction: column; /* Länkarna placeras under varandra */
+  gap: 6px; /* Mellanrum mellan länkarna */
+
+  margin: 0; /* Tar bort standardmarginal */
+  padding: 0; /* Tar bort standardpadding */
+  list-style: none; /* Tar bort listpunkter */
+}
+
+.address a:hover,
+.footer-links a:hover {
+  color: #1f3932; /* Mörkare färg vid hover */
+}
+
+.address a:focus-visible,
+.footer-links a:focus-visible {
+  outline: 3px solid #f5860e; /* Fokusram */
+  outline-offset: 3px; /* Avstånd till fokusram */
+}
