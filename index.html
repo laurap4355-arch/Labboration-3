@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Norrgläntan</title>
+
+  <!-- Ansluter till Google Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Hämtar typsnitten Lora och Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!-- Kopplar HTML-filen till CSS-filen -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<!-- Allt synligt innehåll på webbsidan börjar här -->
+<body> 
+
+    <!-- Sidhuvud med logotyp, webbplatsnamn och huvudnavigation -->
+  <header class="site-header">
+
+    <!-- Grupperar logo och webbplatsnamnet -->
+    <div class="brand">
+
+      <!-- Logo fungerar som en länk tillbaka till startsidan -->
+      <a href="index.html" class="logo"> 
+        <img src="bilder/logotyp_green.png" alt="Norrgläntans logotyp">
+      </a>
+
+      <!-- Webbplatsens namn -->
+      <span class="site-name">Norrgläntan</span>
+    </div>
+
+    <!--Huvudnavigationen på sidan. aria-label förklarar navigationens funktion för skärmläsare.-->
+    <nav class="navbar" aria-label="Huvudnavigation">
+      <ul>
+        <!-- Huvudnavigation med tillfälliga länkar. href="#" används eftersom undersidorna ännu inte finns. -->
+        <li><a href="#">Upptäck</a></li>
+        <li><a href="#">Aktiviteter</a></li>
+        <li><a href="#">Boende</a></li>
+        <li><a href="#">Hitta hit</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+  <!-- Sidans huvudsakliga innehåll -->
+  <main>
+
+     <!-- Hero-sektion med stor bild, rubrik, text och CTA-länk -->
+     <section class="hero">
+
+      <!-- Hero-sektionens stora bakgrundsliknande bild -->
+      <img src="bilder/hero.jpg" alt="Sjö omgiven av skog i solnedgång">
+
+      <!-- Grupperar rubrik, introduktionstext och länk.
+        class används för att placera och designa gruppen i CSS.-->
+      <div class="hero-content">
+         <h1>Naturen väntar i Norrgläntan</h1>
+
+         <p>
+          Upptäck vidsträckta skogar, stilla sjöar och storslagna
+          vyer. I Norrgläntan finns plats för både äventyr och
+          avkoppling.
+         </p>
+
+         <!-- Länk som designas som en knapp i CSS -->
+         <a href="#" class="button">
+          Upptäck Norrgläntan
+        </a>
+      </div>
+
+     </section>
+
+
+    <!--Introduktionssektion om Norrgläntan.  
+       lass="introduktion" används för sektionens CSS.-->
+     <section class="introduktion">
+
+      <!-- Grupperar introduktionens rubrik och texter -->
+      <div class="introduktion-content">
+         <h2>Nära till naturen</h2>
+
+         <p>
+          I Norrgläntan är naturen alltid nära. Här möts skogar,
+          sjöar och berg i ett landskap som bjuder in till
+          upplevelser året runt. Vandra längs slingrande leder,
+          ta dig ut på vattnet eller hitta en lugn plats och njut
+          av omgivningarna.
+         </p>
+
+         <p>
+          Oavsett om du söker äventyr eller bara vill komma bort
+          en stund finns det alltid något nytt att upptäcka.
+        </p>
+      </div>
+
+     </section>
+
+
+     <!--Aktivitetssektion med tre kort.
+      Class ="aktiviteter" används för sektionens CSS.-->
+     <section class="aktiviteter">
+      <h2>Upplev Norrgläntan</h2>
+
+      <!-- Behållare som placerar aktivitetskorten med CSS Grid -->
+      <div class="grid-container">
+
+         <!-- Självständigt innehållskort om vandring -->
+         <article class="card">
+          <img  src="bilder/vandra.jpg" alt="Vandringsled genom skogen">
+
+          <!-- Grupperar kortets rubrik och text -->
+          <div class="card-content">
+            <h3>Vandra</h3>
+
+            <p>
+              Följ leder genom skog och över öppna höjder.
+              Här finns vandringar för både korta utflykter
+              och längre dagar ute i naturen.
+            </p>
+          </div>
+         </article>
+
+         <!-- Självständigt innehållskort om paddling -->
+         <article class="card">
+          <img src="bilder/paddla.jpg" alt="Person som paddlar på en sjö">
+
+          <div class="card-content">
+            <h3>Paddla</h3>
+
+            <p>
+              Ta dig ut på Norrgläntans sjöar och upptäck
+              landskapet från vattnet. Hitta din egen vik
+              eller stanna till vid någon av rastplatserna
+              längs stranden.
+            </p>
+          </div>
+        </article>
+
+        <!-- Självständigt innehållskort om att upptäcka området -->
+        <article class="card">
+          <img src="bilder/upptack.jpg" alt="Person som blickar ut över skogar och vattendrag">
+
+          <div class="card-content">
+            <h3>Upptäck</h3>
+
+            <p>
+              Ibland är det bästa äventyret det som inte är
+              planerat. Utforska skogar och utsiktsplatser
+              och upptäck dina egna favoriter längs vägen.
+            </p>
+          </div>
+        </article>
+      </div>
+     </section>
+
+
+     <!-- Avslutande CTA-sektion -->
+     <section class="avsluta">
+
+       <!-- Grupperar rubrik, text och CTA-länk -->
+       <div class="avsluta-content">
+         <h2>Planera ditt besök</h2>
+
+         <p>
+          Norrgläntan har något att erbjuda under hela året.
+          Här hittar du boende nära naturen och bra
+          utgångspunkter för områdets aktiviteter. Börja
+          planera ditt besök och hitta det som passar dig.
+         </p>
+
+         <!-- Länk som designas som en knapp i CSS -->
+         <a href="#hitta-hit" class="button2">
+          Planera ditt besök
+         </a>
+      </div>
+
+     </section>
+  </main>
+
+   <!--Sidfot med logo, kontaktuppgifter och länkar. -->
+  <footer class="site-footer" >
+
+     <!-- Grupperar logotypen och texten i sidfoten -->
+     <div class="footer-brand">
+         <img class="footer-logo" src="bilder/logotyp_green.png" alt="Norrgläntans logotyp">
+
+         <!-- Grupperar webbplatsnamnet och citatet -->
+         <div class="footer-brand-text">
+             <p class="footer-name">Norrgläntan</p>
+             <p>Naturupplevelser året runt.</p>
+         </div>
+     </div>
+ 
+    <!-- Sektion med kontaktuppgifter -->
+    <section class="contacts" >
+
+      <h2 >Kontakt</h2>
+
+      <!-- address används för kontaktinformation -->
+      <address class="address">
+          <!-- Öppnar mailto -->
+          <a href="mailto:info@norrglantan.com"> info@norrglantan.com</a>
+
+          <!-- Gör telefonnumret klickbart på mobil -->
+         <a href="tel:+46101234567"> 010-123 45 67</a>
+      </address>
+    </section>
+
+    <!-- Navigation med länkar i sidfoten -->
+    <nav class="footer-links" aria-labelledby="footer-links-heading" > 
+
+      <h2 >Länkar</h2>
+
+      <ul>
+         <li><a href="#upptack">Upptäck</a></li>
+         <li><a href="#aktiviteter">Aktiviteter</a></li>
+         <li><a href="#boende">Boende</a></li>
+         <li><a href="#hitta-hit">Hitta hit</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body>
+
+</html>
